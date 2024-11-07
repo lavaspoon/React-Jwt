@@ -10,10 +10,12 @@ const Signup = () => {
     const [name, changeName] = useForm();
     const [age, changeAge] = useForm();
     const router = useNavigate();
+
     const onClick = async () => {
         await signUp(id, pw, name, age);
         router('/');
     };
+
     return (
         <Wrapper>
             <Title>회원가입</Title>
